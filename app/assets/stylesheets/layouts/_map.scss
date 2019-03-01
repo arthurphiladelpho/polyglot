@@ -1,0 +1,47 @@
+#map {
+  height: 100vh;
+  position: sticky !important;
+  top: 0 !important;
+  margin: 0 15px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-map {
+  flex: 0 0 70%;
+}
+
+.results {
+  flex: 0 0 29%;
+}
+
+.padding-right-none {
+  padding-right: 0;
+}
+
+.small-padding {
+  padding: 15px;
+}
+
+.tiny-padding-right {
+  padding-right: 10px;
+}
+
+@media (max-width: 1000px) {
+  .flex-box {
+    flex-direction: column-reverse;
+  }
+  .index-map {
+    position: sticky !important;
+  }
+  #map {
+    height: 40vh;
+  }
+}
+
+.map-show {
+  height: 50vh !important;
+}

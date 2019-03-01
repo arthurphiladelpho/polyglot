@@ -1,0 +1,27 @@
+
+  <div class="modal fade" id='<%= "review-modal-#{review.id}"%>' tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="card-header">
+            <h5 class="modal-title"><%= review.user.username %></h5>
+            <h5 class="language-review flags-small">
+              <% review.english_rating.times do %>
+                <%= image_tag 'flag_colored.svg', class: "review-icon" %>
+              <% end %>
+              <% (5-review.english_rating).times do %>
+                <%= image_tag 'flag.svg', class: "review-icon" %>
+              <% end %>
+            </h5>
+          </div>
+          <h5 class="modal-title"><%= "#{distance_of_time_in_words(review.created_at, Time.now)} ago" %></h5>
+        </div>
+        <div class="modal-body">
+          <h6><%= review.content %></h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

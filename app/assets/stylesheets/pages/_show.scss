@@ -1,0 +1,146 @@
+body {
+  background-color: #FDF6FA;
+  color: gray;
+} p {
+  font-size: 15px;
+  font-family: "Century Gothic" !important;
+} h2 {
+  color: $primary-black;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.info {
+  margin: 0;
+  text-align: center;
+}
+
+.google-review {
+  text-align: center;
+}
+
+.flags:hover{
+  opacity: 0.6;
+}
+
+.in-this-location {
+  margin: 0 auto;
+}
+
+.main-show-header {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.show-header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+.final-show-header {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+
+.show-subheader {
+  text-align: center;
+}
+
+.show-address {
+  padding-bottom: 0 5px 5px 5px;
+}
+
+.show-paragraph {
+  margin: 0;
+  padding: 5px 5px 20px 5px;
+}
+
+.language-review {
+  // margin: 10px 0;
+  text-align: center;
+}
+
+.phone-number {
+ text-align: center;
+}
+
+.fa-comment, .fa-mobile-alt {
+  color: $primary-black;
+}
+
+.fa-mobile-alt {
+  padding-left: 1px;
+}
+
+.fa-star .fa-google {
+  color: $secondary-gray;
+}
+
+.btn-space {
+  margin-top: 10px;
+}
+
+.show-subheader {
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+.rating-label {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2rem;
+}
+
+.flags {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+#myDIV {
+  transition: opacity 0.5s;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  &.shown {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+.margin-bottom-zero {
+  margin-bottom: 0px;
+}
+
+.top-margin {
+  margin-top: 15px;
+}
+
+#show-more {
+  cursor: pointer;
+}
+
+.new_review {
+  text-align: center;
+}
+
+.nil-content {
+  color: $primary-gray;
+  opacity: 0.8;
+}
+
+.margin-top {
+  margin-top: 25px;
+}
+
+.our-center-modal {
+  display: flex;
+  align-items: center;
+}

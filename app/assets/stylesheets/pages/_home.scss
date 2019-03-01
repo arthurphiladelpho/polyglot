@@ -1,0 +1,59 @@
+#fluid-container {
+  min-height: calc(100vh - 70px);
+  background-color: $tertiary-gray;
+}
+
+.field {
+  text-align: center;
+}
+
+.field-header {
+  height: 75px;
+}
+
+.field-content {
+  margin-top: 10px;
+}
+
+.field-logo {
+
+}
+
+.field-img {
+  height: 50px;
+}
+
+.review {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+h4 {
+  color: $primary-black;
+  margin: 40px 0;
+  padding: 0;
+}
+
+.how-it-works-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 0
+}
+
+.how-it-works {
+  color: $primary-black;
+  margin-top: 0;
+}
+
+.button-container {
+  text-align:center;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}

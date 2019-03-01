@@ -1,0 +1,17 @@
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,500i,700|Quicksand:300,400,500,700|Raleway:300,400,400i,500,700");
+
+// To use a font file (.woff) uncomment following lines
+@font-face {
+  font-family: "Proxima Nova";
+  src: font-url("proxima-nova.otf");
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: font-url("century-gothic.otf");
+}
+
+// Define fonts for body and headers
+$body-font: "Proxima Nova";
+$headers-font: "Century Gothic";

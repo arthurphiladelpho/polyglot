@@ -1,0 +1,60 @@
+<div class="home-wrapper">
+  <div class="banner">
+    <div class="container">
+      <div class="banner-content text-center">
+        <h2>find services in english</h2>
+        <%= form_tag("/reviews", method: "get", id: "search_place") do %>
+          <div class="form-row form-inline">
+            <%= text_field_tag :input_address,
+              params[:input_address],
+              class: "form-control text-center",
+              placeholder: "What do you want to do today?" %>
+            <%= hidden_field_tag :search_lat, '-22.9866074' %>
+            <%= hidden_field_tag :search_lng, '-43.2173538'%>
+            <%= submit_tag "find", class: "btn btn-primary", id: "search_button" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div id="fluid-container" class="how-it-works-wrapper">
+    <h3 class="text-center how-it-works">How It Works</h3>
+    <div class="container icon-container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="review center">
+            <div class="field field-img">
+              <%= image_tag "magnifier-tool.svg", height: 50, class: "field-logo" %>
+            </div>
+            <div class="field field-header">
+              <h4>Find services that speak your language</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="review">
+            <div class="field field-img">
+              <%= image_tag "review.svg", height: 50, class: "field-logo" %>
+            </div>
+            <div class="field field-header">
+              <h4> Help others by leaving reviews </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="review">
+            <div class="field field-img">
+              <%= image_tag "visibility.svg", height: 50, class: "field-logo" %>
+            </div>
+            <div class="field field-header">
+              <h4>Advertise your business to foreigners</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+       <a href="#top" id="bottom"><h6 class="btn btn-primary">search</h6></a>
+    </div>
+  </div>
+</div>

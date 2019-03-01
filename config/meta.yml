@@ -1,0 +1,5 @@
+meta_product_name: "Polyglot"
+meta_title: "Polyglot - Find services in English"
+meta_description: "Polyglot helps you find services that speak your language."
+meta_image: "meta_image.jpg"                       # should exist in `app/assets/images/`
+twitter_account: "@polyglot"   # required for Twitter Cards

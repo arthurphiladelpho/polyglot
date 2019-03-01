@@ -1,0 +1,73 @@
+<% content_for :meta_title, "#{@name} is on #{DEFAULT_META["meta_product_name"]}" %>
+
+<div class="container">
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="info">
+          <h2 class="main-show-header"><%= @name %></h2>
+          <div class="reviews">
+            <div id="average">
+              <%= render 'average', reviews: @reviews %>
+            </div>
+          </div>
+        </div>
+        <div class="text-center margin-top margin-bottom-zero">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Add a review
+          </button>
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top: 10em">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-center" id="exampleModalLongTitle">Leave a Review</h5>
+                </div>
+                <div class="modal-body">
+                  <% @review = Review.new(place_id: @place_id) %>
+                  <%= render 'form', review: @review %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% unless @reviews.count == 0 %>
+      <h4 class="show-header text-center">English Reviews</h4>
+    <% end %>
+    <div id="reviews">
+      <div class="row" id="row-container">
+        <% @reviews.first(3).each do |review| %>
+            <%= render 'review', review: review %>
+        <% end %>
+      </div>
+      <div class="row">
+        <div id="myDIV">
+          <% @reviews.drop(3).each do |review| %>
+            <%= render 'review', review: review %>
+        <% end %>
+        </div>
+      </div>
+      <% if @reviews.count > 3 %>
+        <h5 class="text-center"><a id="show-more">Show more</a></h5>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <h4 class="final-show-header text-center">Details</h4>
+      <p class="google-review show-subheader">
+        <i class="fab fa-google"></i> &nbsp
+        <% @rating.round.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+        <% (5-@rating.round).times do %>
+          <i class="far fa-star"></i>
+        <% end %>
+      </p>
+      <p class="show-subheader"><%= @formatted_address %></p>
+      <p class="show-paragraph phone-number"> <i class="fas fa-mobile-alt"></i>&nbsp&nbsp <%= @formatted_phone_number %></p>
+      <div id="map" class="map-show" data-markers="<%= @markers.to_json %>"></div>
+    </div>
+  </div> <!-- close wrapper -->
+</div> <!-- close container -->

@@ -1,0 +1,23 @@
+function refreshForm(innerHTML) {
+  const newReviewForm = document.getElementById('new_review');
+  newReviewForm.innerHTML = innerHTML;
+  window.ratingRefresh();
+}
+
+function addReview(reviewHTML) {
+  const reviews = document.getElementById('row-container');
+  reviews.insertAdjacentHTML('beforeend', reviewHTML);
+  const average = document.getElementById('average');
+  const average_partial = '<%= j render "average", reviews: @reviews %>'
+  average.insertAdjacentHTML('beforeend', average_partial);
+  average.firstElementChild.remove();
+  document.getElementById('exampleModalCenter').click()
+}
+
+<% if @review.errors.any? %>
+  refreshForm('<%= j render "form", review: @review %>');
+<% else %>
+  addReview('<%= j render "review", review: @review %>');
+  <% @review = Review.new(place_id: @place_id) %>
+  refreshForm('<%= j render "form", review: @review %>');
+<% end %>
